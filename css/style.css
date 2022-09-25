@@ -1,0 +1,596 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/**************************************/
+
+/***統一***/
+a{
+    text-decoration: none;
+}
+/***wrap***/
+.wrap{
+    max-width: 960px;
+    margin: 0 auto;
+}
+/***header***/
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.75);
+    width: 100%;
+}
+.header a{
+    color: white;
+}
+/**header-logo**/
+.header h1{
+    font-size: 24px;
+    margin: 16px 42px;
+}
+/**header-menu**/
+.header .menu{
+    display: flex;
+    margin-right: 48px;
+}
+.header .menu li{
+    margin: 10px;
+}
+.header .menu a:hover{
+    color: yellow;
+    font-size: 20px;
+    transition: 0.2s;
+}
+/*在PC上隱藏漢堡選單*/
+.showmenu{
+    display: none;
+}
+/***banner***/
+.banner{
+    background-image: url(../img/header_desktop.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 364px;
+    margin-bottom: 10px;
+}
+
+/**banner_text**/
+.banner_text{
+    background: rgba(0,0,0,0.35); /*rgb:顏色;a:透明度*/
+    color: #fff;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+}
+.banner_text h2{
+    font-size: 36px;
+    padding: 20px;
+}
+.banner_text span{
+    line-height: 24px;
+}
+
+/***content***/
+/**content-introduction**/
+.content > h3{
+    font-family: MicrosoftJhengHeiRegular;
+    font-size: 24px;
+    color: #3D1101;
+    line-height: 32px;
+    text-align: center;
+    margin: 30px;
+}
+.introduction{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.introduction li{
+    width: 30.33333%;
+    margin: 1%;
+}
+.introduction img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+.introduction h3{
+    font-family: MicrosoftJhengHeiRegular;
+    font-size: 18px;
+    color: #3D1101;
+    margin-top: 20px;
+    text-align: center;
+}
+.introduction p{
+    font-family: MicrosoftJhengHeiRegular;
+    font-size: 16px;
+    line-height: 20px;
+    color: #3D1101;
+    margin: 15px;
+}
+/**content-mainchef**/
+.mainchef{
+    display: flex;
+    background: #3D1101;
+    margin-bottom: 50px;
+}
+.mainchef img{
+    max-width: 50%;
+    margin-left: 42px;
+}
+.mainchef_text{
+    padding: 24px;
+}
+.mainchef_text h3{
+    font-family: MicrosoftJhengHeiRegular;
+    font-size: 20px;
+    color: #EFE9E7;
+    line-height: 32px;
+} 
+.mainchef_text p, .mainchef_text span{
+    font-family: MicrosoftJhengHeiRegular;
+    font-size: 16px;
+    color: #EFE9E7;
+    line-height: 20px;
+    margin-top: 20px;
+}
+/**content-feeling**/
+.feeling{
+    display: flex;
+}
+.feeling > li{
+    display: flex;
+    width: 30.33333%;
+    margin: 1%;
+}
+.feeling img{
+    width: 67px;
+    height: 67px;
+    border-radius: 50%;
+}
+.feeling-text{
+    margin-bottom: 50px;
+}
+.feeling-text h4{
+    margin: 22px 13px;
+    font-family: MicrosoftJhengHeiRegular;
+    font-size: 18px;
+    color: #3D1101;
+}
+.feeling-text p{
+    margin-left: 13px;
+    margin-bottom: 16px;
+    font-family: MicrosoftJhengHeiRegular;
+    font-size: 16px;
+    color: #3D1101;
+    line-height: 24px;
+}
+.feeling-text h5{
+    font-family: MicrosoftJhengHeiRegular;
+    font-size: 16px;
+    color: rgba(61,17,0,0.75);
+    line-height: 24px;
+    text-align: end;
+}
+/**content-reservation**/
+.reservation{
+    background: #FAFAFA 70%;
+    border: 1px solid #FAFAFA;
+}
+.reservation h3{
+    font-family: MicrosoftJhengHeiRegular;
+    font-size: 24px;
+    color: #3D1101;
+    text-align: center;
+    line-height: 32px;
+    margin: 30px 0;
+}
+.map-info{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+.map-info img{
+    width: 50%;
+}
+.map-info p{
+    font-family: PingFangTC-Light;
+    font-size: 14px;
+    color: #3D1101;
+    margin-bottom: 6px;
+}
+.map-info .input{
+    width: 350px;
+    height: 32px;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: inset 0px 1px 0px 0px #ECECEC;
+    border-radius: 3px; 
+    margin-bottom: 20px;
+}
+.map-info .btn{
+    width: 70px;
+    height: 32px;
+    font-family: PingFangTC-Regular;
+    font-size: 14px;
+    color: #FFFFFF;
+    background: #F56C23;
+    border-radius: 3px;
+    border: none;
+    padding: 6px;
+    margin-top: 6px;
+    cursor: pointer;
+    float: right;
+    margin-left: 11px;
+}
+.map-info .btn:hover{
+    background: #000000 35%;   
+}
+    
+/***footer***/
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 28px;
+}
+.about-contact{
+    display: flex;
+}
+.about-contact h4{
+    font-family: MicrosoftJhengHeiRegular;
+    font-size: 24px;
+    color: #3D1101;
+    margin-bottom: 16px;
+}
+.about-contact p{
+    font-family: MicrosoftJhengHeiRegular;
+    font-size: 16px;
+    color: #3D1101;
+}
+.about p{
+    width: 260px;
+}
+.media h2{
+    font-family: NotoSansCJKtc-Black;
+    font-size: 48px;
+    font-weight: bolder;
+    color: #3D1101;
+    letter-spacing: 0px;
+}
+.media img{
+    width: 31px;
+    margin: 22px 6px;
+    float: right;
+}
+
+
+/***cart頁面***/
+.cart-content{
+    display: flex;
+    justify-content: space-around;
+    padding: 1%;
+}
+.order-list{
+    width: 60%;
+}
+.order-list h3{
+    font-family: MicrosoftJhengHeiRegular;
+    font-size: 20px;
+    color: #3D1101;
+    line-height: 32px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+.order-list a{
+    font-family: MicrosoftJhengHeiRegular;
+    font-size: 16px;
+    color: #3D1101;
+    line-height: 32px;
+    border-bottom: 1px solid #3D1101;
+    display: block;
+}
+.order-list a:hover{
+    background: #3D1101;
+    color: #fff;
+}
+.product-top{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.search-bar{
+    display: flex;
+}
+.product-top .search-bar input{
+    width: 400px;
+    border: 2px solid #3D1101;
+}
+.product-top .search-bar a{
+    display: block;
+    padding: 3px;
+    background: #3D1101;
+    color: #fff;
+}
+.product-top .pay{
+    display: flex;
+    align-items: center;
+}
+.product-top .pay p{
+    border-right: 1px solid #3D1101;
+    margin-right: 17px;
+    padding-right: 17px;
+    font-family: MicrosoftJhengHeiRegular;
+    font-size: 16px;
+    color: #3D1101;
+}
+.product-top .pay a{
+    display: block;
+    padding: 3px;
+    color: #3D1101;
+}
+.product-list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.product-list li{
+    width: 30.3333%;
+    margin: 1%;
+    box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+    position: relative;
+}
+.product-list li img{
+    width: 100%;
+}
+.product-list h3{
+    font-family: MicrosoftJhengHeiRegular;
+    font-size: 20px;
+    color: #3D1101;
+    text-align: center;
+    margin-top: 11px;
+}
+.product-list p{
+    font-family: MicrosoftJhengHeiRegular;
+    font-size: 12px;
+    color: #3D1101;
+    text-align: center;
+}
+.product-list .line{
+    width: 91px;
+    border-bottom: 1px solid #3D1101;
+    margin: 8px auto;
+}
+.product-list .add a{
+    color: #FF5E45;
+    padding: 3px;
+    display: block;
+}
+.product-list .add{
+    border: 2px solid #FF5E45;
+    margin: 13px 10px 10px 10px;
+    text-align: center;
+}
+.product-list .add a:hover{
+    background: #FF5E45;
+    color: #fff;
+    cursor: pointer;
+}
+.like{
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}
+.like i{
+    color: #fff;
+}
+/***login頁面***/
+.login h2{
+    font-family: NotoSansCJKtc-Black;
+    font-size: 48px;
+    color: #3D1101; 
+    font-weight: 600;
+    text-align: center;
+}
+.login p{
+    font-family: NotoSansCJKtc-Medium;
+    font-size: 20px;
+    color: #3D1101;
+    font-weight: 600;
+    text-align: center;
+}
+.login-form{
+    width: 300px;
+    height: 273px;
+    background: #EFE9E7;
+    border-top: 5px solid #FF5E45;
+    box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+    margin: 35px auto;
+    padding: 13px;
+}
+.login-form h3{
+    font-family: NotoSansCJKtc-Black;
+    font-size: 18px;
+    color: #3D1101;
+    text-align: center;
+    margin-top: 13px;
+    font-weight: 600;
+}
+.login-form h4{
+    font-family: MicrosoftJhengHeiRegular;
+    font-size: 16px;
+    color: #3D1101;
+    font-weight: 400;
+    margin-top: 16px;
+}
+.login-form input{
+    width: 270px;
+    height: 32px;
+    margin-bottom: 2px;
+}
+.login-form span{
+    font-family: MicrosoftJhengHeiRegular;
+    font-size: 14px;
+    color: #FF5E45;
+    cursor: pointer;
+}
+.login-form span:hover{
+    color: #000;
+}
+.login-form .btn{
+    width: 125px;
+    height: 32px;
+    font-family: PingFangTC-Regular;
+    font-size: 14px;
+    color: #FFFFFF;
+    background: #F56C23;
+    border-radius: 3px;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+    float: right;
+    margin-top: 40px;
+    margin-right: 15px;
+}
+.login-form .btn:hover{
+    background: #000000 35%;   
+}
+/**************************************/
+@media(max-width: 860px){
+    .cart-content{
+        flex-direction: column;
+    }
+    .order-list{
+        width: 100%;
+        margin-bottom: 3%;
+    }
+}
+@media(max-width: 768px){
+    .introduction{
+        flex-direction: column;
+    }
+    .introduction li{
+        width: 90%;
+        margin: 1% auto;
+    }
+    .mainchef{
+        flex-direction: column;
+    }
+    .mainchef img{
+        margin: auto;
+        max-width: 100%;
+    }
+    .feeling{
+        flex-direction: column;
+    }
+    .feeling > li{
+        width: 90%;
+        margin: 1% auto;
+    }
+    .footer{
+        flex-wrap: wrap;
+    }
+    .media h2{
+        margin-top: 30px;
+    }
+    .map-info{
+        flex-direction: column;
+        padding: 5%;
+    }
+    .map-info img{
+        width: 60%;
+        margin: auto;
+        margin-bottom: 8%;
+    }
+    .map-info .input {
+        width: 100%;
+    }
+}
+
+@media(max-width: 375px){
+    .menu {
+        /*隱藏header選單開始*/
+        max-height: 0px; /*高度變成0讓大家看不到*/
+        overflow: hidden; /*超出0範圍的東西要隱藏*/
+        /**隱藏選單結束**/
+        transition: max-height 1s; /*選單下拉跟收回的速度*/
+        margin-top: 1px;
+        /**絕對定位疊在網頁上**/
+        position: absolute; /*在ul下絕對定位，可依照header區塊蓋掉content內容*/
+        z-index: 100; /*權重較高*/
+        /**header 80px+1px boder 線條**/
+        top: 50px; /*希望選單從下面(線下)跑出來，因為header高度設80，top從81開始*/
+        left: 0; /*讓寬度滿版*/
+        right: 0; /*讓寬度滿版*/
+        background: #000;
+        flex-direction: column;
+    }
+    .showmenu{
+        display: block;
+        margin: 10px;
+    }
+    /**jQ點擊後動態在 body 加上 class **/
+    .menu-show .menu{
+        max-height: 500px; /*滿足這個class的條件，高度就出現*/
+        width: 100%;
+    }
+    .banner{
+        background-image: url(../img/header_mobile.png);
+    }
+    .about-contact{
+        flex-direction: column;
+    }
+    .about-contact h4{
+        margin-top: 30px;
+    }
+}
